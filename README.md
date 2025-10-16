@@ -95,18 +95,18 @@
             result = probs.index(max(probs))
             return result
         
-        qc=QuantumCircuit(2)
-        qc.apply_single(QuantumCircuit.H(),0)
-        qc.apply_single(QuantumCircuit.X(),1)
-        qc.apply_single(QuantumCircuit.Y(),0)
-        qc.apply_single(QuantumCircuit.Z(),1)                    #line 98 to 109 : example usage of gates
-        qc.apply_single(QuantumCircuit.S(),0)
-        qc.apply_CX(0,1)
-        qc.apply_CY(1,0)
-        qc.apply_CZ(0,1)
+    qc=QuantumCircuit(2)
+    qc.apply_single(QuantumCircuit.H(),0)
+    qc.apply_single(QuantumCircuit.X(),1)
+    qc.apply_single(QuantumCircuit.Y(),0)
+    qc.apply_single(QuantumCircuit.Z(),1)                    #line 98 to 109 : example usage of gates
+    qc.apply_single(QuantumCircuit.S(),0)
+    qc.apply_CX(0,1)
+    qc.apply_CY(1,0)
+    qc.apply_CZ(0,1)
 
-        print("final statevector: ", qc.view_state())
-        print("measurement outcome: ", qc.measure())
+    print("final statevector: ", qc.view_state())
+    print("measurement outcome: ", qc.measure())
     
     
 
